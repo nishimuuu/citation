@@ -1,0 +1,5 @@
+require 'pathname'
+lib = Pathname.new(__FILE__).dirname.join('..', 'lib').expand_path.to_s
+$:.unshift lib
+require 'citation'
+EntryPoint::CLI.start
